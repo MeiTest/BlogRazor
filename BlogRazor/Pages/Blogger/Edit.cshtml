@@ -1,0 +1,50 @@
+﻿@page
+@model BlogRazor.Pages.Blogger.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>BloggerModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="BloggerModel.ID" />
+            <div class="form-group">
+                <label asp-for="BloggerModel.Name" class="control-label"></label>
+                <input asp-for="BloggerModel.Name" class="form-control" />
+                <span asp-validation-for="BloggerModel.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BloggerModel.Sex" class="control-label"></label>
+                <input asp-for="BloggerModel.Sex" class="form-control" />
+                <span asp-validation-for="BloggerModel.Sex" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BloggerModel.Sign" class="control-label"></label>
+                <input asp-for="BloggerModel.Sign" class="form-control" />
+                <span asp-validation-for="BloggerModel.Sign" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BloggerModel.RegistDate" class="control-label"></label>
+                <input asp-for="BloggerModel.RegistDate" class="form-control" />
+                <span asp-validation-for="BloggerModel.RegistDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

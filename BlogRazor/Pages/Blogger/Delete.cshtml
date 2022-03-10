@@ -1,0 +1,46 @@
+﻿@page
+@model BlogRazor.Pages.Blogger.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>BloggerModel</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BloggerModel.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BloggerModel.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BloggerModel.Sex)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BloggerModel.Sex)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BloggerModel.Sign)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BloggerModel.Sign)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BloggerModel.RegistDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BloggerModel.RegistDate)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="BloggerModel.ID" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

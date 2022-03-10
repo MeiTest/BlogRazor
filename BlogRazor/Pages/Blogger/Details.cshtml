@@ -1,0 +1,43 @@
+﻿@page
+@model BlogRazor.Pages.Blogger.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>BloggerModel</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BloggerModel.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BloggerModel.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BloggerModel.Sex)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BloggerModel.Sex)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BloggerModel.Sign)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BloggerModel.Sign)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BloggerModel.RegistDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BloggerModel.RegistDate)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.BloggerModel.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
